@@ -119,7 +119,7 @@ public class PessoaDao {
 	 * 
 	 * @param pessoa
 	 */
-	public void incluir(String email, String senha, String nome, String sobrenome) {
+	public void incluir(Pessoa pessoa) {
 		String sql = "INSERT INTO pessoas(email, senha, nome, sobrenome)"
 				+ " VALUES(?,?,?,?)";
 		
@@ -128,10 +128,10 @@ public class PessoaDao {
 		
 		try {
 			stmt = conn.prepareStatement(sql.toString());
-			stmt.setString(1, email);
-			stmt.setString(2, senha);
-			stmt.setString(3, nome);
-			stmt.setString(4, sobrenome);
+			stmt.setString(1, pessoa.getEmail());
+			stmt.setString(2, pessoa.getSenha());
+			stmt.setString(3, pessoa.getNome());
+			stmt.setString(4, pessoa.getSobrenome());
 			stmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
