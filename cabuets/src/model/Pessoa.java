@@ -2,7 +2,17 @@ package model;
 
 import java.util.ArrayList;
 
-
+/**
+ * 
+ * @author 1210841 - Dennis Fernandes
+ * 		   1213978 - Raul Martins
+ * 		   1213854 - José Carlos Oliveira
+ * 
+ * @version
+ * 			<p><b>v1.0 (14/10/2013)</b><br>
+ * 				- Criação da classe, atributos e seus metodos get's e set's
+ * 			</p>
+ */
 public class Pessoa {
 
 	String email;
