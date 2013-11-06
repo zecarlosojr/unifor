@@ -10,7 +10,7 @@ import model.Pessoa;
 import model.Postagem;
 
 /**
- * Classe teste XPTO
+ * Classe teste XPTO - TESTE DO TESTE
  * 
  * @author 1210841 - Dennis Fernandes<br>
  * 		   1213978 - Raul Martins<br>
