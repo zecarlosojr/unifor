@@ -3,6 +3,12 @@ package fachada;
 import dao.PessoaDao;
 import model.Pessoa;
 
+/**
+ * 
+ * @author JoséCarlos
+ * Teste de inserção de asterisco! =]
+ *
+ */
 
 public class Fachada {
 	
