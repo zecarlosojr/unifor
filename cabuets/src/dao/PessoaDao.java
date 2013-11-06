@@ -22,11 +22,7 @@ import model.Postagem;
  * 			</p>
  */
 public class PessoaDao {
-	/**
-	 * 
-	 * @param email
-	 * @return Pessoa populada
-	 */
+	
 	public Pessoa consultar(String email) {
 		
 		String sql_pessoas = "SELECT email, senha, nome, sobrenome"
@@ -115,10 +111,7 @@ public class PessoaDao {
 		
 	}
 	
-	/**
-	 * 
-	 * @param pessoa
-	 */
+	
 	public void incluir(Pessoa pessoa) {
 		String sql = "INSERT INTO pessoas(email, senha, nome, sobrenome)"
 				+ " VALUES(?,?,?,?)";
@@ -139,10 +132,7 @@ public class PessoaDao {
 		
 	}
 	
-	/**
-	 * 
-	 * @param pessoa
-	 */
+	
 	public void deletar(Pessoa pessoa) {
 		
 		Connection conn = null;
@@ -186,22 +176,13 @@ public class PessoaDao {
 		
 	}
 	
-	/**
-	 * 
-	 * @param pessoa
-	 */
 	public void editar(Pessoa pessoa) {
 		
 		
 		
 	}
 	
-	/**
-	 * 
-	 * @param pessoa
-	 * @param mensagem
-	 * @param data
-	 */
+	
 	public void inserirPostagem(Pessoa pessoa, String mensagem) {
 
 		
@@ -225,11 +206,7 @@ public class PessoaDao {
 		
 	}
 	
-	/**
-	 * 
-	 * @param pessoa
-	 * @param data
-	 */
+	
 	public void deletarPostagem(Pessoa pessoa, String data){
 
 		String sql = "DELETE FROM postagens"
