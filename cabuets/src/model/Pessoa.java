@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /**
  * 
- * @author 1210841 - ennis Fernandes
+ * @author 1210841 - Dennis Fernandes
  * 		   1213978 - Raul Martins
  * 		   1213854 - José Carlos Oliveira
  * 
