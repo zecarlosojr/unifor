@@ -34,7 +34,9 @@ public class Pessoa {
 	
 	
 
-	
+	/**
+	 * @return the email
+	 */
 	public String getEmail() {
 		return email;
 	}
@@ -45,7 +47,9 @@ public class Pessoa {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
+	/**
+	 * @return the senha
+	 */
 	public String getSenha() {
 		return senha;
 	}
