@@ -9,7 +9,18 @@ import persistencia.BD;
 import model.Pessoa;
 import model.Postagem;
 
-
+/**
+ * Classe teste XPTO - TESTE DO TESTE
+ * 
+ * @author 1210841 - Dennis Fernandes<br>
+ * 		   1213978 - Raul Martins<br>
+ * 		   1213854 - José Carlos Oliveira<br>
+ * 
+ * @version
+ * 			<p><b>v1.0 (14/10/2013)</b><br>
+ * 				-{@link #consultar(String)}
+ * 			</p>
+ */
 public class PessoaDao {
 	
 	public Pessoa consultar(String email) {
