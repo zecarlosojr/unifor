@@ -1,5 +1,5 @@
 package servlet;
-//mos
+//moso
 import java.io.IOException;
 import java.io.PrintWriter;
 
