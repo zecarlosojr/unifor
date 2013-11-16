@@ -27,21 +27,21 @@ public class PessoaDao {
 	 * @param email
 	 * @return Pessoa populada
 	 */
-	public Pessoa consultar(String email) {
+	public Pessoa consultar(Pessoa p) {
 		
 		String sql_pessoas = "SELECT email, senha, nome, sobrenome"
 						+ " FROM pessoas"
-						+ " WHERE email ='" + email + "'";
+						+ " WHERE email ='" + p.getEmail() + "'";
 		
 		String sql_postagens = "SELECT mensagem, data"
 						+ " FROM Postagens"
-						+ " WHERE email = '" + email + "'"
+						+ " WHERE email = '" + p.getEmail() + "'"
 						+ " ORDER BY data DESC";
 		
 		String sql_relacionamentos = "SELECT p.email, p.senha, p.nome, p.sobrenome"
 						+ " FROM pessoas AS p"
 						+ " INNER JOIN relacionamentos AS r ON p.email = r.email_amigo"
-						+ " WHERE r.email = '" + email + "'";
+						+ " WHERE r.email = '" + p.getEmail() + "'";
 						
 		
 		Connection conn = null;

@@ -3,14 +3,29 @@
   <display-name>cabuets</display-name>
   <welcome-file-list>
     <welcome-file>login.html</welcome-file>
- 
   </welcome-file-list>
+  
+  <!-- SERVLET DE CADASTRO DE PESSOAS -->
   <servlet>
 	<servlet-name>CadastrarPessoa</servlet-name>
 	<servlet-class>servlet.CadastrarPessoa</servlet-class>
   </servlet>
+  
   <servlet-mapping>
 	<servlet-name>CadastrarPessoa</servlet-name>
-	<url-pattern>/cadastramento</url-pattern>
+	<url-pattern>/cadastrar</url-pattern>
   </servlet-mapping>
+  
+  <!-- SERVLET DE LOGIN -->
+  <servlet>
+  	<servlet-name>Login</servlet-name>
+  	<servlet-class>servlet.Login</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Login</servlet-name>
+  	<url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  
+  
 </web-app>
