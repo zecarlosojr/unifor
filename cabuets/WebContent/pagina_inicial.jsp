@@ -73,6 +73,8 @@
 	
 	
 	
+
+           	  
     <!-- BARRA DE MENU PRINCIPAL -->
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
@@ -117,6 +119,8 @@
     <!-- FIM DA BARRA DE MENU PRINCIPAL -->
 	
 	
+    
+           	  
    	<div class="container-fluid">
     	
     	<div class="row-fluid">

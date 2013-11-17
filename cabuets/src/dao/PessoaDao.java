@@ -23,13 +23,13 @@ import model.Postagem;
  */
 public class PessoaDao {
 	/**
-	 * 
 	 * @param email
 	 * @return Pessoa populada
 	 */
+	
 	public Pessoa consultar(Pessoa p) {
 		
-		String sql_pessoas = "SELECT email, senha, nome, sobrenome"
+		String sql_pessoas = "SELECT email, senha, nome, sobrenome, dt_nascimento"
 						+ " FROM pessoas"
 						+ " WHERE email ='" + p.getEmail() + "'";
 		
@@ -38,7 +38,7 @@ public class PessoaDao {
 						+ " WHERE email = '" + p.getEmail() + "'"
 						+ " ORDER BY data DESC";
 		
-		String sql_relacionamentos = "SELECT p.email, p.senha, p.nome, p.sobrenome"
+		String sql_relacionamentos = "SELECT p.email, p.senha, p.nome, p.sobrenome, p.dt_nascimento"
 						+ " FROM pessoas AS p"
 						+ " INNER JOIN relacionamentos AS r ON p.email = r.email_amigo"
 						+ " WHERE r.email = '" + p.getEmail() + "'";
@@ -61,7 +61,9 @@ public class PessoaDao {
 				pessoa.setEmail( rs.getString("email") );
 				pessoa.setSenha( rs.getString("senha") );
 				pessoa.setNome( rs.getString("nome") );
+				pessoa.setDt_nascimento( rs.getString("dt_DataNascimento") );
 				pessoa.setSobrenome( rs.getString("sobrenome") );
+				
 			}
 			stmt.close();
 			rs.close();
@@ -81,11 +83,14 @@ public class PessoaDao {
 			rs = stmt.executeQuery();
 			
 			while(rs.next()){
+				
 				Pessoa amigo = new Pessoa();
+				
 				amigo.setEmail( rs.getString("email") );
 				amigo.setSenha( rs.getString("senha") );
 				amigo.setNome( rs.getString("nome") );
 				amigo.setSobrenome( rs.getString("sobrenome") );
+				amigo.setDt_nascimento( rs.getString("dt_DataNascimento") );
 				pessoa.getRelacionamentos().add(amigo);
 			}
 			
@@ -120,19 +125,23 @@ public class PessoaDao {
 	 * @param pessoa
 	 */
 	public void incluir(Pessoa pessoa) {
-		String sql = "INSERT INTO pessoas(email, senha, nome, sobrenome)"
-				+ " VALUES(?,?,?,?)";
+		String sql = "INSERT INTO pessoas(email, senha, nome, sobrenome, dt_nascimento)"
+				+ " VALUES(?,?,?,?,?)";
 		
 		Connection conn = BD.getConn();
 		PreparedStatement stmt = null;
 		
 		try {
+		
 			stmt = conn.prepareStatement(sql.toString());
+			
 			stmt.setString(1, pessoa.getEmail());
 			stmt.setString(2, pessoa.getSenha());
 			stmt.setString(3, pessoa.getNome());
 			stmt.setString(4, pessoa.getSobrenome());
+			stmt.setString(5, pessoa.getDt_nascimento());
 			stmt.executeUpdate();
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
