@@ -19,6 +19,7 @@ public class Pessoa {
 	String senha;
 	String nome;
 	String sobrenome;
+	String dt_nascimento;
 	ArrayList<Postagem> postagem;
 	ArrayList<Pessoa> relacionamentos;
 	
@@ -26,6 +27,7 @@ public class Pessoa {
 		this.email = null;
 		this.senha = null;
 		this.nome = null;
+		this.dt_nascimento =  null;
 		this.sobrenome = null;
 		this.postagem = new ArrayList<Postagem>();
 		this.relacionamentos = new ArrayList<Pessoa>();
@@ -113,6 +115,17 @@ public class Pessoa {
 	 */
 	public void setRelacionamentos(ArrayList<Pessoa> relacionamentos) {
 		this.relacionamentos = relacionamentos;
+	}
+	
+	public String getDt_nascimento() {
+		return dt_nascimento;
+	}
+
+
+
+
+	public void setDt_nascimento(String dt_nascimento) {
+		this.dt_nascimento = dt_nascimento;
 	}
 	
 }

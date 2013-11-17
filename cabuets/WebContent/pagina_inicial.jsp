@@ -38,31 +38,6 @@
 
   <body>
 
-<!-- BARRA DE MENU PRINCIPAL -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="pagina_inicial.html">Cabuet's</a>
-          <div class="nav-collapse collapse">
-            <p class="navbar-text pull-right">
-              Bem vindo <a href="pages/perfil.html" class="navbar-link">Dennis Fernandes</a>
-            </p>
-            <ul class="nav">
-              <li class="span10">
-           	  </li>
-              
-              <li class="active">
-              	<a href="pagina_inicial.html">Página Inicial</a>
-              </li>
-              
-              <li>
-              	<a href="perfil.html">Perfil</a>
-              </li>
            	  
     <!-- BARRA DE MENU PRINCIPAL -->
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -102,17 +77,6 @@
     <!-- FIM DA BARRA DE MENU PRINCIPAL -->
     
            	  
-           	  
-           	  
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
-    <!-- FIM DA BARRA DE MENU PRINCIPAL -->
-    
-
-
    	<div class="container-fluid">
     	<div class="row-fluid">
 	    	<div class="span3">

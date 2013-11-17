@@ -90,26 +90,26 @@
   				
 		        <!-- DIV DO FORMULÁRIO DE CADASTRO -->
 		        <div class="span4">
-		        	<form  class="form-horizontal">
+		        	<form  action="cadastrar" method="post" class="form-horizontal">
 					  
 					  <br><br>
-					  <h1 align="center">Cadastre-se agora!</h1>
-					  <h4 align="center">É grátis e sempre será</h4>
+					  <h1 align="center">Cadastre-se agora abestado!</h1>
+					  <h4 align="center">É de graça.</h4>
 					  <br><br>
 					  
 					  <!-- NOME -->
 					  <div class="control-group">
 					    <label class="control-label" for="inputNome">Nome</label>
 					    <div class="controls">
-					      <input type="text" id="inputNome" placeholder="Nome">
+					      <input type="text" name="nome" id="inputNome" placeholder="Nome">
 					    </div>
 					  </div>
 					  
 					  <!-- SOBRENOME -->
 					  <div class="control-group">
-					    <label class="control-label" for="inputSobrenome">Sobrenome</label>
+					    <label class="control-label" for="inputSobrenome">SobreNome</label>
 					    <div class="controls">
-					      <input type="text" id="inputSobrenome" placeholder="Sobrenome">
+					      <input type="text" name="sobreNome" id="inputSobrenome" placeholder="Sobrenome">
 					    </div>
 					  </div>
 					  
@@ -117,7 +117,7 @@
 					  <div class="control-group">
 					    <label class="control-label" for="inputDataNascimento">Data de Nascimento</label>
 					    <div class="controls">
-					      <input type="date" id="inputDataNascimento" placeholder="Data de Nascimento">
+					      <input type="date" name ="dataNascimento" id="inputDataNascimento" placeholder="Data de Nascimento">
 					    </div>
 					  </div>
 					  
@@ -125,7 +125,7 @@
 					  <div class="control-group">
 					    <label class="control-label" for="inputEmail">Email</label>
 					    <div class="controls">
-					      <input type="text" id="inputEmail" placeholder="Email">
+					      <input type="text" name ="email" id="inputEmail" placeholder="Email">
 					    </div>
 					  </div>
 					  
@@ -133,7 +133,7 @@
 					  <div class="control-group">
 					    <label class="control-label" for="inputPassword">Senha</label>
 					    <div class="controls">
-					      <input type="password" id="inputPassword" placeholder="Senha">
+					      <input type="password" name="senha" id="inputPassword" placeholder="Senha">
 					    </div>
 					  </div>
 					  
@@ -148,7 +148,7 @@
 		        
   			</div><!-- row-fluid -->
   		</div><!-- /container-fluid -->
-  		
+  		 
   		
   		
 	</body>

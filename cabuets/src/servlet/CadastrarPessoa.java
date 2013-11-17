@@ -26,15 +26,14 @@ public class CadastrarPessoa extends HttpServlet {
 			Fachada f = new Fachada();
 			Pessoa p = new Pessoa();
 			
-			p.setEmail(request.getParameter("txt_email"));
-			p.setSenha(request.getParameter("txt_senha"));
-			p.setNome(request.getParameter("txt_nome"));
-			p.setSobrenome(request.getParameter("txt_sobrenome"));
+			p.setEmail(request.getParameter("email"));
+			p.setSenha(request.getParameter("senha"));
+			p.setNome(request.getParameter("nome"));
+			p.setSobrenome(request.getParameter("sobreNome"));
+			p.setDt_nascimento(request.getParameter("dataNascimento"));
+			
 			f.incluirPessoa(p);
 			
-			//PrintWriter msg = response.getWriter();
-			//msg.println("<html><head><body><h1>Cadastrado com sucesso!</h1></body></head><html>");
-			//msg.close();
 			RequestDispatcher rd =  request.getRequestDispatcher("login.html");
 			rd.forward(request, response);
 			
