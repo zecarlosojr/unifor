@@ -14,6 +14,7 @@ import model.Pessoa;
  * 			<p><b>v1.0 (16/11/2013) - Dennis Fernandes</b><br>
  * 				- Criação do método {@link #incluirPessoa(Pessoa)}<br>
  * 				- Criação do método {@link #logar(Pessoa)}<br>
+ * 				- Criação do método {@link #consultar(Pessoa)}<br>
  * 			</p>
  *
  */
@@ -30,6 +31,8 @@ public class Fachada {
 		dao.incluir(pessoa);
 	}
 	
+	
+	
 	/**
 	 * Método de login que irá verificar
 	 * se os emais e senhas são validos.
@@ -42,5 +45,21 @@ public class Fachada {
 		p = dao.consultar(pessoa);
 		return ( pessoa.getSenha().equals(p.getSenha()) );
 	}
+	
+	
+	
+	/**
+	 * Método para pegar todos os dados de uma
+	 * pessoa.
+	 * 
+	 * @param pessoa
+	 * @return Pessoa populada
+	 */
+	public Pessoa consultar(Pessoa pessoa) {
+		Pessoa p = dao.consultar(pessoa);
+		return p;
+	}
+	
+	
 	
 }
