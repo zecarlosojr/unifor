@@ -1,5 +1,7 @@
 package fachada;
 
+import java.util.ArrayList;
+
 import dao.PessoaDao;
 import model.Pessoa;
 
@@ -60,6 +62,9 @@ public class Fachada {
 		return p;
 	}
 	
-	
+	public ArrayList<Pessoa> listarPostagem(Pessoa pessoa) {
+		ArrayList<Pessoa> retorno = dao.listarPostagens(pessoa);
+		return retorno;
+	}
 	
 }

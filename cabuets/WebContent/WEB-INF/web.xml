@@ -27,4 +27,15 @@
   	<url-pattern>/login</url-pattern>
   </servlet-mapping>
   
+  <!-- SERVLET PARA LISTAR AS POSTAGENS DE UMA PESSOA E AMIGOS -->
+  <servlet>
+	<servlet-name>ListarPostagens</servlet-name>
+	<servlet-class>servlet.ListarPostagem</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+	<servlet-name>ListarPostagens</servlet-name>
+	<url-pattern>/postagem</url-pattern>
+  </servlet-mapping>
+  
 </web-app>

@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -24,7 +25,7 @@ import model.Pessoa;
  * 			</p>
  */
 
-public class Login extends HttpServlet {
+public class ListarPostagem extends HttpServlet {
 
 	/**
 	 * 
@@ -36,21 +37,15 @@ public class Login extends HttpServlet {
 						  HttpServletResponse response)
 						  throws ServletException, IOException {
 		
-		Pessoa p = new Pessoa();
 		Fachada f = new Fachada();
 		HttpSession session = request.getSession();
+		Pessoa p = (Pessoa) session.getAttribute("pessoa");
+		ArrayList<Pessoa> postagens = new ArrayList<Pessoa>();
+		postagens = f.listarPostagem(p);
 		
-		p.setEmail(request.getParameter("email_login"));
-		p.setSenha(request.getParameter("senha_login"));
-		
-		if(f.logar(p) == true) {
-			Pessoa pessoa = f.consultar(p);
-			session.setAttribute("pessoa", pessoa);
-			RequestDispatcher rd = request.getRequestDispatcher("/postagem");
-			rd.forward(request, response);
-		}else{
-			response.sendRedirect("pages_erros/erro_login.html");
-		}
+		session.setAttribute("postagens", postagens);
+	    RequestDispatcher rd = request.getRequestDispatcher("pagina_inicial.jsp");
+		rd.forward(request, response);
 		
 	}
 	
