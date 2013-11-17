@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import fachada.Fachada;
 import model.Pessoa;
@@ -37,13 +38,14 @@ public class Login extends HttpServlet {
 		
 		Pessoa p = new Pessoa();
 		Fachada f = new Fachada();
+		HttpSession session = request.getSession();
 		
 		p.setEmail(request.getParameter("email_login"));
 		p.setSenha(request.getParameter("senha_login"));
 		
 		if(f.logar(p) == true) {
 			Pessoa pessoa = f.consultar(p);
-			request.setAttribute("pessoa", pessoa);
+			session.setAttribute("pessoa", pessoa);
 			RequestDispatcher rd = request.getRequestDispatcher("pagina_inicial.jsp");
 			rd.forward(request, response);
 		}else{
